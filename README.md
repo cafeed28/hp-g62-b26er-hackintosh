@@ -1,4 +1,9 @@
 # macOS Sierra 10.12.6 on HP G62 b26er
+
+![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/Laptop.jpeg)
+
+![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/About.png)
+
 ## What works:
  - CPU: natively
  - GPU: Intel HD Graphics 1st-gen: Full QE/CI, brightness control (VGA/HDMI not working because my ATI 5470 dGPU is R.I.P.)
@@ -78,11 +83,11 @@ You can find it as described here https://www.insanelymac.com/forum/topic/287133
 
 Or like this if you on linux (you need Memory at ?0000000 (...) **[size=4M]**)
 
-![image](https://user-images.githubusercontent.com/62172116/167652614-7315f9a4-5fcf-46d5-8d97-a2e72dd012bd.png)
+![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/lspci.png)
 
  - Go to DD02 and add Name `(_HID, EisaId ("LCD1234"))` like on screenshot
 
-![image](https://user-images.githubusercontent.com/62172116/167652908-eca2b002-49a5-4776-a00d-3fed0a6d24e0.png)
+![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/DD02.png)
 
  - Go to `Scope (_PR)` and add below
  ```
@@ -143,12 +148,12 @@ Store (0x13121312, LEVX)
 ```
 (i'm not sure)
 
-![image](https://user-images.githubusercontent.com/62172116/167653118-c00f810d-3133-4d13-a2a5-ded505c8aaf8.png)
+![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/WAK.png)
 
 ### Fixing sleep
  - Go to `Device (EHC1)` and add `Name(_STA, 0)` like on screenshot
 
-![image](https://user-images.githubusercontent.com/62172116/167653230-15596959-bb63-4915-a3f8-cf0fc0c77678.png)
+![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/EHC1.png)
 
  - Install this https://www.tonymacx86.com/threads/hack-backlight-control-with-intelbacklight-acpibacklight-with-brightness-rollback.240929
 
