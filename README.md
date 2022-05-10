@@ -21,7 +21,7 @@
 ## What I haven't tested:
  - Webcam
  - Touchpad (it broken)
- - Card reader (i haven't SD cards at home, but according https://www.insanelymac.com/forum/topic/295612-guide-hp-g62-mac-os-x-mavericks it must work)
+ - Card reader (i haven't SD cards at home, but according [this](https://www.insanelymac.com/forum/topic/295612-guide-hp-g62-mac-os-x-mavericks) it must work)
  - External mic (same as cardreader)
 
 ## Preparing
@@ -44,7 +44,7 @@
  - Patch DSDT as described next
 
 ## DSDT Patching
-Before next steps, apply `G62 350m.txt` patch by Sainath (https://www.insanelymac.com/forum/topic/293943-guide-hp-g62-dsdt-working-with-speedstep)
+Before next steps, apply `G62 350m.txt` [patch](https://www.insanelymac.com/forum/topic/293943-guide-hp-g62-dsdt-working-with-speedstep)
 
 ### Fixing backlight
  - Extract your ACPI tables (press F4 in Clover menu)
@@ -52,7 +52,7 @@ Before next steps, apply `G62 350m.txt` patch by Sainath (https://www.insanelyma
  - Decompile your DSDT and SSDT:
 `iasl -e SSDT*.aml -d DSDT.aml`
 `iasl -e DSDT.aml -d SSDT*.aml`
- - Open DSDT.dsl with MaciASL and follow this: https://github.com/RehabMan/Laptop-DSDT-Patch#rehabmans-laptop-patch-repository
+ - Open DSDT.dsl with MaciASL and follow [this](https://github.com/RehabMan/Laptop-DSDT-Patch#rehabmans-laptop-patch-repository)
  - Apply `[igpu] Rename GFX0 to IGPU` patch
  - Go to `Scope (_SB)` (first occurrence) and add below
 ```
@@ -79,7 +79,7 @@ Field (BRI4, AnyAcc, Lock, Preserve)
 ```
 Note: you need to replace all 0xC.... addreses to your BAR0 register.
 
-You can find it as described here https://www.insanelymac.com/forum/topic/287133-guide-backlight-brightness-for-intel-80860046-1st-gen-hd-gma-5700mhd (Step 1)
+You can find it as described [here](https://www.insanelymac.com/forum/topic/287133-guide-backlight-brightness-for-intel-80860046-1st-gen-hd-gma-5700mhd) (Step 1)
 
 Or like this if you on linux (you need Memory at ?0000000 (...) **[size=4M]**)
 
@@ -155,7 +155,7 @@ Store (0x13121312, LEVX)
 
 ![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/EHC1.png)
 
- - Install this https://www.tonymacx86.com/threads/hack-backlight-control-with-intelbacklight-acpibacklight-with-brightness-rollback.240929
+ - Install [this](https://www.tonymacx86.com/threads/hack-backlight-control-with-intelbacklight-acpibacklight-with-brightness-rollback.240929)
 
 ## Clover config
  - SMBIOS: `MacBookPro6,2`
@@ -176,10 +176,11 @@ Store (0x13121312, LEVX)
  - GhostRaider for Arrandale Grpahics guide
  - giofrida for his [guide](https://www.insanelymac.com/forum/topic/295612-guide-hp-g62-mac-os-x-mavericks)
  - mnorthern for his [guide](https://www.insanelymac.com/forum/topic/287133-guide-backlight-brightness-for-intel-80860046-1st-gen-hd-gma-5700mhd)
+ - Sainath for his [patch](https://www.insanelymac.com/forum/topic/293943-guide-hp-g62-dsdt-working-with-speedstep)
+ - wanderson.passos for patched [AppleBacklight.kext](https://www.tonymacx86.com/threads/hack-backlight-control-with-intelbacklight-acpibacklight-with-brightness-rollback.240929)
 
 # TODO
  - Use WhatereverGreen instead of patched Arrandale kexts, i found guide but i am too lazy now (https://github.com/Goldfish64/ArrandaleGraphicsHackintosh)
  - Use ACPIBacklight instead of IntelBacklight with patched AppleBacklight
  - Upgrade to newer macOS
  - Write kext for Broadcom WiFi ![image](https://cdn.discordapp.com/emojis/941206395246751784.png?size=20)
-
