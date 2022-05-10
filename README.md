@@ -1,6 +1,6 @@
 # macOS Sierra 10.12.6 on HP G62 b26er
 
-![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/Laptop.jpeg)
+<img src="/images/Laptop.jpeg" alt="HP G62 b26er macOS" height="70%" width="70%">
 
 ![image](https://raw.githubusercontent.com/cafeed28/hp-g62-b26er-hackintosh/main/images/About.png)
 
