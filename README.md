@@ -79,7 +79,7 @@ Field (BRI4, AnyAcc, Lock, Preserve)
 ```
 Note: you need to replace all 0xC.... addreses to your BAR0 register.
 
-You can find it as described here https://www.insanelymac.com/forum/topic/287133-guide-backlight-brightness-for-intel-80860046-1st-gen-hd-gma-5700mhd/ (Step 1)
+You can find it as described here https://www.insanelymac.com/forum/topic/287133-guide-backlight-brightness-for-intel-80860046-1st-gen-hd-gma-5700mhd (Step 1)
 
 Or like this if you on linux (you need Memory at ?0000000 (...) **[size=4M]**)
 
@@ -174,6 +174,8 @@ Store (0x13121312, LEVX)
  - acidanthera for VoodooPS2
  - autumnrain, slice2009, zenith432 for VoodooHDA
  - GhostRaider for Arrandale Grpahics guide
+ - giofrida for his [guide](https://www.insanelymac.com/forum/topic/295612-guide-hp-g62-mac-os-x-mavericks)
+ - mnorthern for his [guide](https://www.insanelymac.com/forum/topic/287133-guide-backlight-brightness-for-intel-80860046-1st-gen-hd-gma-5700mhd)
 
 # TODO
  - Use WhatereverGreen instead of patched Arrandale kexts, i found guide but i am too lazy now (https://github.com/Goldfish64/ArrandaleGraphicsHackintosh)
